@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  
+    <p class="text-left">Smart ID Scanner, Tesseract 4.0 for the OCR</p>
+    <p>Upload an image of a document for OCR - there is a 2MB size limit using the Flask Development server (not intended for production).  Here are images under 1MB (right click on link and save to disk):<p>
+      
+    </p>
+    </p>
+    <div class="upload-form">
+      <form action = "/uploader" method = "POST" 
+        enctype = "multipart/form-data">
+        <input type = "file" name = "file" />
+        <input type = "submit"/>
+      </form>
+    </div>
+  
+
+{% endblock %}
